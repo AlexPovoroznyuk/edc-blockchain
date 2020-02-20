@@ -29,3 +29,4 @@ Main style file
 @import "./components/_lang.pcss";
 @import "./components/_subscr-2.pcss";
 @import "./components/_gar.pcss";
+@import "./components/_modals.pcss";

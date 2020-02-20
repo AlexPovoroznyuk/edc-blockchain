@@ -70,7 +70,7 @@ $(document).ready(function () {
             getCountdown();
         }, 1000);
     }
-})
+
 
 $(".top-slider .slider").slick({
     slidesToShow: 3,
@@ -112,4 +112,92 @@ $(".bottom-slider .slider").slick({
           }
         }
       ]
+})
+
+
+
+
+  $(".modal-trigger").click(function () {
+      if ($(this).attr('data-target')) {
+          let modalOpen = $(this).attr('data-target');
+          $(`#${modalOpen}`).addClass("active");
+          $("body").addClass("modal-open");
+      }
+  })
+  $(".close-modal").click(function () {
+      $(".modal").removeClass('active');
+      $("body").removeClass("modal-open");
+  })
+
+  var EmptyError = "can't be empty";
+  var EmailError = "invalid email";
+  var TgError = "Please type your telegram nickname with @ or your phone number";
+  var UrlError = "incorrect format";
+  var sendForm;
+  $("form").on("submit", function (e) {
+      e.preventDefault();
+      var thisForm = $(this);
+      sendForm = true;
+      $(this).find(".reqiered-field").each(function () {
+          console.log($(this).attr("name"))
+          if ($(this).val() == "") {
+              $(this).closest(".input-item").addClass("validation-error");
+              $(this).closest(".input-item").find(".error span").html(EmptyError);
+              if ($(this).attr("data-name") == "password") {
+
+                  $(".password-error span").html(EmptyError);
+                  $(".about-pass").addClass("password-validation-error");
+
+              }
+              sendForm = false;
+
+
+          } else if ($(this).attr("name") == "email") {
+              if ($(this).val() == "") {
+                  $(this).closest(".input-item").addClass("validation-error");
+                  $(this).closest(".input-item").find(".error span").html(EmptyError);
+                  sendForm = false;
+              } else if (!(/^[A-Za-z0-9][A-Za-z0-9-_\.]+@([a-z]|[a-z0-9]?[a-z0-9-]+[a-z0-9])\.[a-z0-9]{2,10}(?:\.[a-z]{2,10})?$/.test($(this).val()))) {
+                  $(this).closest(".input-item").addClass("validation-error");
+                  $(this).closest(".input-item").find(".error span").html(EmailError);
+                  sendForm = false;
+              } else {
+                  $(this).closest(".input-item").removeClass("validation-error");
+              }
+          } else {
+              $(this).closest(".input-item").removeClass("validation-error");
+              $(".about-pass").removeClass("password-validation-error");
+              $(".password-error span").html("");
+          }
+      });
+      if (sendForm) {
+          $(".list-form button[type ='submit']").attr('disabled', true);
+          var that = $(this);
+          var formData = new FormData(that.get(0));
+          $.ajax({
+              url: $(this).attr('action'),
+              type: 'POST',
+              contentType: false,
+              processData: false,
+              data: formData,
+
+              success: function (data) {
+                  $(".modal").removeClass("active");
+                  $(".modal.success").addClass("active");
+                  $("body").addClass("modal-open");
+
+                  that.find("input").each(function () {
+                      if (!($(this).hasClass("noclear"))) {
+                          $(this).val("");
+                      }
+                  });
+              },
+              error: function (xhr, err, data) {
+                  $(".modal").removeClass("active");
+                  $(".modal.success").addClass("active");
+                  $("body").addClass("modal-open");
+              }
+          });
+      }
+  });
 })

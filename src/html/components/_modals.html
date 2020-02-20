@@ -1,0 +1,71 @@
+<div class="modal" id="form-modal">
+
+    <div class="modal-inner">
+        <div class="modal-overlay close-trigger close-modal"></div>
+        <div class="modal-content">
+            <div class="close-trigger close-trigger-btn close-modal">
+                <div></div>
+            </div>
+            <div class="title">
+                <p>Записатся на вебинар</p>
+            </div>
+            <div class="description">
+                <p>Успех в MLM-предпринимательстве - это история не только про большой труд: вы много работали ранее, но не всегда получали</p>
+            </div>
+            <form action="/send.php">
+                <div class="input-item">
+                    <div class="input-wr">
+                        <input type="text" placeholder="Email" class="reqiered-field" name="email">
+                    </div>
+                    <span class="valid-error"></span>
+                </div>
+
+                <div class="button-wr">
+                    <button class="button-grad" type="submit"><span>Записаться на вебинар</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal thk-modal success" id="success">
+
+    <div class="modal-inner">
+        <div class="modal-overlay close-trigger close-modal"></div>
+        <div class="modal-content">
+            <div class="close-trigger close-trigger-btn close-modal">
+                <div></div>
+            </div>
+            <div class="title">
+                <p>Вы успешно записались на вебинар!</p>
+            </div>
+            <div class="button-wr close-trigger close-modal">
+                <button class="button-grad"><span>OK</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal err-modal error" id="err-modal">
+
+    <div class="modal-inner">
+        <div class="modal-overlay close-trigger close-modal"></div>
+        <div class="modal-content">
+            <div class="close-trigger close-trigger-btn close-modal">
+                <div></div>
+            </div>
+            <div class="title">
+                <p>Произошла ошибка</p>
+            </div>
+            <div class="description">
+                <p>Пожалуйста, переотправте форму</p>
+            </div>
+            <div class="button-wr close-trigger close-modal">
+                <button class="button-grad"><span>OK</span></button>
+            </div>
+        </div>
+    </div>
+</div>
