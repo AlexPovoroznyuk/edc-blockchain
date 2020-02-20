@@ -11,6 +11,21 @@ Main style file
 
 @import "./components/_general.pcss";
 @import "./components/_header.pcss";
+@import "./components/_header-main.pcss";
 @import "./components/_reuse-elements.pcss";
 @import "./components/_main-content.pcss";
 @import "./components/_footer.pcss";
+
+@import "./components/_home-main.pcss";
+@import "./components/_advantages.pcss";
+@import "./components/_webinars.pcss";
+@import "./components/_request.pcss";
+@import "./components/_platform.pcss";
+@import "./components/_subscribe.pcss";
+@import "./components/_guarantees.pcss";
+@import "./components/_partner-main.pcss";
+@import "./components/_header-partner.pcss";
+@import "./components/_map-slider.pcss";
+@import "./components/_lang.pcss";
+@import "./components/_subscr-2.pcss";
+@import "./components/_gar.pcss";

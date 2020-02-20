@@ -1,0 +1,197 @@
+.guarantees{
+    height: 85.3em;
+    display: flex;
+    position: relative;
+    @media(max-width: 992px){
+        height: auto;
+    }
+    .content-wr{
+        padding-top: 28.7em;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        @media(max-width: 992px){
+            padding-top: 3em;
+            text-align: center;
+            padding-bottom: 5em;
+        }
+    }
+    .top-bg{
+position: absolute;
+height: 19.5em;
+top: -5.6em;
+left: 0;
+right: 0;
+width: 100%;
+background-image: url(../img/pics/bg6.png);
+background-size: cover;
+background-position: center;
+    }
+    .container-main{
+display: flex;
+flex-wrap: wrap;
+    }
+        .left-part{
+width: 51%;
+padding-top: 4.3em;
+@media(max-width: 992px){
+    width:100%;
+}
+@media(max-width: 768px){
+                
+    font-size: 1.2em;
+}
+        }
+        .container-left{
+            ul{
+                @media(max-width: 992px){
+                max-width: 50em;
+                margin: auto;
+                text-align: left;
+                margin-bottom: 4em;
+                }
+                
+                li{
+                    display: flex;
+                    margin-bottom: 1.2em;
+                    &::before{
+                        content: "";
+                        min-width: 1.25em;
+                        height: 1em;
+                        margin-right: .75em;
+                        background-image: url(../img/pics/check.png);
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        background-position: center;
+                        margin-top: .15em;
+
+                    }
+                }
+                    p{
+                        color: #63717f;
+                        line-height: 1.5;
+                    }
+                }
+            .question {
+                margin-bottom: 1.3em;
+                span {
+    color: #2064ff;
+                }
+            }
+    
+            .title {
+                margin-bottom: .7em;
+                p {
+                    line-height: 1.33;
+                }
+            }
+    
+            .text {
+                margin-bottom: 2em;
+                p {
+    color: #748494;
+    line-height: 1.53;
+    &:not(:last-child){
+        margin-bottom: 1em;
+    }
+                }
+            }
+        }
+        .right-part{
+            width: 49%;
+            position: relative;
+            @media(max-width: 992px){
+                width:100%;
+            }
+            .main-img  {
+                position: relative;
+                z-index: 2;
+                max-width: 28.5em;
+                @media(max-width: 992px){
+                    margin: 0 auto;
+                    
+                }
+        img{
+            display: block;
+            max-width: 100%;
+        }
+    }
+            .circle-container{
+                @media(max-width: 992px){
+                    display: none;
+                }
+            }
+            .circle{
+                position: absolute;
+                pointer-events: none;
+                img{
+                    display: block;
+                    width: 100%;
+                }
+            }
+                .circle1 {
+                    top: -58%;
+                    right: 60%;
+                    width: 50em;
+                    bottom: -50%;
+                    margin: auto;
+                    img{}
+                }
+                .circle2{
+                    width: 35em;
+    right: -90%;
+    bottom: -34%;
+                    img{}
+                }
+                .circle3{
+                    right: -59%;
+    width: 50em;
+    bottom: 25%;
+    margin: auto;
+                    img{}
+                }
+}
+.item-wr{
+    width: 100%;
+    display: flex;
+    margin-top: 5em;
+    @media(max-width: 992px){
+       flex-wrap: wrap;
+    }
+            .item{
+                width: 25%;
+                text-align: center;
+                @media(max-width: 992px){
+                    width: 100%;
+                    text-align: center;
+                    font-size: 1.2em;
+                    margin-bottom: 2em;
+                }
+            }
+                .pic{
+                    max-width: 2.5em;
+                    height: 2.5em;
+                    margin: 0 auto 1.7em;
+                    img{
+display: block;
+width: 100%;
+                    }
+                }
+                .title{
+                    margin-bottom: .9em;
+                    p{
+                        color: #748494;
+                    }
+                }
+                .txt{
+                    @media(max-width: 768px){
+                
+                        font-size: 1.2em;
+                    }
+                    p{
+                        text-transform: uppercase;
+                        line-height: 2;
+                    }
+                }
+            }
+}

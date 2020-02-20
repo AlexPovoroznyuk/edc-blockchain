@@ -12,7 +12,18 @@ h1{
 html{
     font-size: 20px;
 }
+.slick-list{
+    width: 100%;
+    overflow: hidden;
+}
 
+.slick-track{
+    display: flex;
+}
+
+.slick-arrow{
+    position: absolute;
+}
 button{
     background: transparent;
     outline: none;
@@ -28,7 +39,9 @@ button{
 input{
     outline: none;
 }
-
+.home{
+    background-color: #21242b;
+}
 body{
     font-family: "HelveticaNeue", serif;
     font-weight: 400;
@@ -62,4 +75,11 @@ a {
     &[href]{
         cursor: pointer;
     }
+}
+
+.question {
+    @media(max-width: 560px){
+      font-size: 1.1em;  
+    }
+    
 }

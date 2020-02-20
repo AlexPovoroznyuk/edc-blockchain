@@ -1,0 +1,77 @@
+.webinars {
+    padding-top: 6em;
+    .webinar-wr {
+        display: flex;
+        @media(max-width: 992px){
+            flex-wrap: wrap;
+            text-align: center;
+            padding: 0 15px;
+        }
+    }
+
+    .left-part {
+        width: 51%;
+        @media(max-width: 992px){
+            width: 100%;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+        }
+    }
+
+    .right-part {
+        width: 49%;
+        display: flex;
+        align-items: center;
+        padding-top: 4em;
+        @media(max-width: 992px){
+            width: 100%;
+        }
+        .content-wr{
+            max-width: 28em;
+            @media(max-width: 992px){
+                max-width: 100%;
+            }
+            
+        }
+        .question {
+            margin-bottom: 1.2em;
+            span {
+color: #2064ff;
+            }
+        }
+
+        .title {
+            margin-bottom: 2em;
+            p {
+                line-height: 1.33;
+            }
+        }
+
+        .text {
+            margin-bottom: 2.4em;
+            @media(max-width: 768px){
+                
+                font-size: 1.2em;
+            }
+            p {
+color: #748494;
+&:not(:last-child){
+    margin-bottom: 1.2em;
+}
+            }
+        }
+
+        .button-wr {
+            max-width: 14em;
+            @media(max-width: 992px){
+                margin:auto;
+            }
+            @media(max-width: 768px){
+                
+                font-size: 1.2em;
+            }
+        }
+    }
+}

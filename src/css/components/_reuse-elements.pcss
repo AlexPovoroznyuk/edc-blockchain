@@ -3,7 +3,11 @@
     margin: 0 auto;
     padding: 0 15px;
 }
-
+.container-main {
+  max-width: calc(58.5em + 30px);
+  margin: 0 auto;
+  padding: 0 15px;
+}
 .decor-elements{
     position: absolute;
     @media(max-width: 992px){
@@ -16,8 +20,6 @@
   
     &:hover {
       .drop-trigger {
-  
-        /* color: #0024de; */
   
         path {
           fill: #0024de;
@@ -94,8 +96,86 @@
       list-style: none;
     }
   }
-
+  .font-60r{
+    font-size: 3em;
+  font-weight: 400;
+}
+  .font-32b{
+    font-size: 1.6em;
+  font-weight: 700;
+}
+.font-32r{
+  font-size: 1.6em;
+font-weight: 400;
+}
+.font-20r{
+  font-size: 1em;
+  font-weight: 400;
+}
   .font-18r{
       font-size: .9em;
       font-weight: 400;
   }
+  .font-16r{
+    font-size: .8em;
+    font-weight: 400;
+}
+  .font-15r{
+    font-size: .75em;
+    font-weight: 400;
+}
+
+.font-12r{
+  font-size: .6em;
+  font-weight: 400;
+}
+
+  .button-grad{
+    padding: 2px;
+    width: 100%;
+    &.empty{
+      &:hover{
+        span{
+          background-color: transparent;
+        }
+        
+      }
+      span{
+        background-color: #21242b;
+      }
+    }
+background:linear-gradient(-182deg, #e3466d 0%, #f98b32 100%);
+/* background-size: cover;
+border: 2px solid transparent; */
+  span{
+    transition: .3s;
+    width: 100%;
+padding: 1em;
+    display: block;
+color: #ffffff;
+font-size: .9em;
+font-weight: 500;
+
+
+  }
+}
+
+.top-content{  
+  text-align: center;
+.title {
+  margin-bottom: 2em;
+  p {
+      line-height: 1.33;
+  }
+}
+
+.txt {
+  margin-bottom: 2.4em;
+  p {
+color: #748494;
+&:not(:last-child){
+margin-bottom: 1.2em;
+}
+  }
+}
+}
