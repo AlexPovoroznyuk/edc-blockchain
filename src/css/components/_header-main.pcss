@@ -1,11 +1,19 @@
 .header-main {
     &.partner{
-        background-color: #2d323b;
+        &.scrolled{
+            .right-part{
+            opacity: 1;
+            }
+        }
         padding-top: .5em;
         padding-bottom: .5em;
         .right-part{
             font-family: inherit;
             max-width: 29em;
+            margin-left: auto;
+            margin-right: 2em;
+            opacity: 0;
+            /* transition: .1s; */
             @media(max-width: 620px){
                 max-width: unset;
                 width: auto;

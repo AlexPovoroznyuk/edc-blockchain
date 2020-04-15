@@ -4,9 +4,18 @@ header {
     position: absolute;
     left: 0;
     right: 0;
-    z-index: 2;
+    z-index: 999;
     &.header-main{
         padding-top: 1.4em;
+    }
+    &.scrolled{
+        position: fixed;
+        background-color: #21242b;
+        border-bottom: 1px solid #748494;
+        animation: slide-in--down 420ms cubic-bezier(.165,.84,.44,1);
+        &--up{
+            animation: slide-in--up 190ms cubic-bezier(.165,.84,.44,1);
+        }
     }
     &:not(.header-main){
        @media(max-width: 1480px){
@@ -30,7 +39,7 @@ header {
         max-width: 12.5em;
         display: flex;
         align-items: center;
-        
+        font-size: 1em;
         img {
             width: 2.5em;
             display: block;
@@ -39,6 +48,7 @@ header {
         .logo-txt{
 font-size: 1.2em;
 font-weight: 400;
+color: #fff;
 b{
 font-weight: 700;
 }
@@ -55,5 +65,23 @@ color: #fff;
 font-weight: 400;
 
         }
+    }
+}
+
+@keyframes slide-in--down{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-in--up{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-100%);
     }
 }

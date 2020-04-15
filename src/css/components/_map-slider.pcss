@@ -1,18 +1,27 @@
 .map-slider {
-    padding: 5em 15px 14.7em;
+    padding: 5em 15px 13em;
     position: relative;
     @media(max-width: 992px){
         padding: 5em 15px;
     }
+    &.top-slider{
+        .container-main {
+            max-width: calc(61.5em + 30px);
+        }
+        .slider {
+
+            padding: 1.5em;
+        }
+    }
     &::before{
         content: '';
-       background-image: url(../img/pics/map.png); 
+       background-image: url(../img/pics/map.jpg); 
        position: absolute;
        top: 0;
        bottom: 0;
        right: 0;
        left: 0;
-       opacity: .05;
+       /* opacity: .05; */
        background-size: cover;
        background-position: center;
        background-repeat: no-repeat;
@@ -20,9 +29,10 @@
 
     }
    &.bottom-slider{
-    /* padding: 5em 15px 16.2em; */
+    padding: 5em 15px 2.7em;
     .top-content{
-        margin-bottom: 3.5em;
+        margin-bottom: .5em;
+        position: relative;
         .title{
          margin-bottom: .9em;
      } 
@@ -38,6 +48,7 @@ border: none;
 box-shadow: 0 20px 70px rgba(0, 0, 0, 0.05);
 border-radius: 7px;
 background-color: #2d323b;
+min-height: 19em;
 @media(max-width: 480px){
     font-size: 1.2em;
 }
@@ -57,6 +68,7 @@ background-color: #2063fc;
 
 a {
     color: #fff;
+    margin-top: auto;
     svg{
         path{
             fill: #fff;
@@ -82,15 +94,20 @@ a {
 
 a {
     color: #0077cc;
+    margin-top: auto;
+    cursor: pointer;
 }
        }
    }
-    .container-main {}
+    .container-main {
+        max-width: calc(64.5em + 30px);
+    }
 
     .content-wrapper {}
 
     .top-content {
         margin-bottom: 6.5em;
+        position: relative;
         @media(max-width: 480px){
             margin-bottom: 4em;
          }
@@ -122,8 +139,20 @@ a {
     .slider {
         display: flex;
         margin: 0 -15px;
+        position: relative;
+        padding: 3em;
     }
+.slick-prev{
+left: 0; 
+} 
+.slick-arrow{
+top: 0;
+bottom: 0;
 
+}
+.slick-next{
+    right: 0;
+    } 
     .slider-item {
         width: calc(100% / 3 - 30px);
         text-align: center;
@@ -131,6 +160,8 @@ a {
 border-radius: 7px;
 border: 1px solid #405261;
 padding: 2.4em;
+display: flex;
+flex-direction: column;
 @media(max-width: 480px){
     font-size: 1.2em;
 }
@@ -156,7 +187,9 @@ padding: 2.4em;
         }
 
         a {
-            color: #1292ee;
+            margin-top: auto;
+    color: #2063fc;
+    cursor: pointer;
         }
     }
 }

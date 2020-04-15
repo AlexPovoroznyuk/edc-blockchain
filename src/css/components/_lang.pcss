@@ -6,19 +6,21 @@
       }
     &::before{
         content: '';
-       background-image: url(../img/pics/map.png); 
+       background-image: url(../img/pics/map.jpg); 
        position: absolute;
        top: 0;
        bottom: 0;
        right: 0;
        left: 0;
-       opacity: .05;
        background-size: cover;
-       background-position: center;
-       background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    height: 48em;
 
     }
-    .container-main {}
+    .container-main {
+        position: relative;
+    }
 
     .content-wrapper {}
 
@@ -50,6 +52,7 @@
             margin: auto;
             border-radius: 50%;
             margin-bottom: .7em;
+            overflow: hidden;
             img {}
         }
 

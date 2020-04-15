@@ -2,8 +2,16 @@
 <html>
     @@include('./components/_head.html')
     <body>
-        @@include('./components/_header.html')
-        @@include('./components/_main-content.html')
+        @@include('./components/_header.html', {
+            "currentLang" : "Русский"
+        })
+        @@include('./components/_main-content.html', {
+            "title" : "Обучайся и развивайся бесплатно с EDC Blockchain!",
+            "description" : "Выбери подходящий формат работы и начни свой путь к успеху в цифровом мире",
+            "button" : "Подробнее",
+            "txt1" : "Узнай о трендах индустрии блокчейн и научись использовать их, чтобы стать лидером нового рынка",
+            "txt2" : "Получи инсайд, построй собственную команду и получай стабильные бонусы!"
+        })
         @@include('./components/_footer.html')
         @@include('./components/_scripts.html')
     </body>
